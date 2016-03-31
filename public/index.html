@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="libs/angular-bootstrap/ui-bootstrap-csp.css">
+<script src=" libs/angular/angular.js "></script>
+<script src="libs/angular-bootstrap/ui-bootstrap.js"></script>
+<script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="app.js"></script>
+
+</head>
+<body ng-app="app" ng-controller="it">
+<table class="table table-striped ">  
+    <tr>
+        <th>Client</th>
+        <th>Candidate</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+<tr ng-repeat="a in interview">
+    <td>{{a.Client}}</td>
+    <td>{{a.Candidate}}</td>
+    <td>{{a.Type}}</td>
+    <td>{{a.Date}}</td>
+    <td>
+        <button class="btn btn-success" ng-click="showQuestions(a)">Show Questions</button>
+    </td>
+</tr>
+</table>
+</body>
+</html>
